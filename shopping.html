@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>쇼핑몰 페이지</title>
+    <style>
+        .header {
+            padding-top: 10px;
+            overflow: hidden;
+        }
+        
+        .headerLogo {
+            width: 140px;
+            height: 50px;
+            padding-right: 10px;
+            position: relative;
+            float: left;
+        }
+        
+        .headerSearch {
+            width: 83%;
+            padding: 5px;
+            float: left;
+        }
+        
+        .headerSearchIcon {
+            padding-top: 5px;
+            float: left;
+        }
+        
+        .user {
+            height: 50px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .userProfilePicture {
+            margin: 3px;
+            float: left;
+        }
+        
+        .userId {
+            margin-left: 5px;
+            padding: 10px;
+            float: right;
+        }
+        
+        .itemName {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .itemPrice {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .remainingNoOfItem {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .remainingNoOfItem span {
+            color: red;
+            font-weight: bold;
+        }
+        
+        .orderDetail {
+            margin-bottom: 40px;
+        }
+        
+        .orderButton {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+    <script>
+        function order() {
+            alert('주문이 완료되었습니다');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="headerLogo">
+                <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/logo-basic-00b7e471b721ce9db8b0758c05a84684413c8aef1ad54caa0f3fcbe7328c947f.svg" alt="No Image">
+            </div>
+            <div class="headerSearch">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="headerSearchIcon">
+                <button type="button" class="btn btn-outline-dark"><svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
+                  </svg></button>
+            </div>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile25.uf.tistory.com%2Fimage%2F99D1DE495CC1CC3E23FA7E" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://t1.daumcdn.net/cfile/tistory/992DFD495CC1CC3E34" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://t1.daumcdn.net/cfile/tistory/99A08A495CC1CC402F" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="user">
+            <div class="userProfilePicture">
+                <img src="https://post-phinf.pstatic.net/MjAxOTEwMjlfNjgg/MDAxNTcyMjgyOTc2NTcx.KvC50k9xBjpDE5y2kk-nKTZy876z0aT492D-ZMAHPV8g.cE6lw2prHY5ndnL_jBRV2q-hw_cZy0dOwFOkRSFo9oog.JPEG/main-qimg-550f22c4dfc27c7ecc3923d8b5c9d7a4-c.jpg?type=w1200" alt="No Image" width="40px"
+                    height="40px" padding="1px">
+                <div class="userId">
+                    스타벅스코리아
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="itemName">
+            스타벅스 네스프레소 캡슐
+        </div>
+        <div class="itemPrice">
+            가격 : 35,000원</span>
+        </div>
+        <div class="remainingNoOfItem">
+            남은수량 : <span>4개</span>
+        </div>
+        <div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">주문자명</span>
+                </div>
+                <input type="text" class="form-control" placeholder="주문자명을 입력하세요" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="orderDetail">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">수량</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                <option selected>수량을 선택하세요</option>
+                <option value="1">1개</option>
+                <option value="2">2개</option>
+                <option value="3">3개</option>
+                <option value="3">4개</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">주소</span>
+                </div>
+                <input type="text" class="form-control" placeholder="주소를 입력하세요" aria-label="Useradress" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">연락처</span>
+                </div>
+                <input type="text" class="form-control" placeholder="연락처를 입력하세요" aria-label="Usercontact" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="orderButton">
+            <button type="button" class="btn btn-primary btn-lg" onclick="order()">주문하기</button>
+        </div>
+    </div>
+</body>
+
+</html>
